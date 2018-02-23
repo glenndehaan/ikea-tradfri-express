@@ -6,7 +6,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const browsersupport = require('express-browsersupport');
-const mongoose = require('mongoose');
 
 /**
  * Import own packages
@@ -105,29 +104,6 @@ app.disable('x-powered-by');
 const server = app.listen(config.application.port, config.application.bind, () => {
     console.log(`[NODE] App is running on: ${config.application.bind}:${config.application.port}`);
 });
-
-/**
- * Configure mongo
- */
-if (typeof config.mongo !== "undefined") {
-    if (config.mongo.auth) {
-        mongoose.connect(`mongodb://${config.mongo.username}:${config.mongo.password}@${config.mongo.host}:${config.mongo.port}/${config.mongo.database}?authSource=admin`, (err) => {
-            if (err) {
-                console.log(`[MONGO] Error while connecting: ${err}`)
-            } else {
-                console.log(`[MONGO] Mongo connection successful!`);
-            }
-        });
-    } else {
-        mongoose.connect(`mongodb://${config.mongo.host}:${config.mongo.port}/${config.mongo.database}`, (err) => {
-            if (err) {
-                console.log(`[MONGO] Error while connecting: ${err}`)
-            } else {
-                console.log(`[MONGO] Mongo connection successful!`);
-            }
-        });
-    }
-}
 
 /**
  * Handle nodemon shutdown
