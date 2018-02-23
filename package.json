@@ -1,0 +1,23 @@
+{
+  "name": "ikea-tradfri-express",
+  "version": "0.0.0",
+  "description": "NPM packages for ikea-tradfri-express",
+  "private": true,
+  "scripts": {
+    "start": "node ./app/server.js",
+    "dev": "nodemon -L --watch ./app ./app/server.js"
+  },
+  "author": "Glenn de Haan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-browsersupport": "^1.3.1",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
