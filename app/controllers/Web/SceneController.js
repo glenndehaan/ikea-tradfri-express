@@ -21,6 +21,18 @@ class SceneController extends baseController {
 
         res.redirect('/');
     }
+
+    /**
+     * Starts the disco
+     *
+     * @param req
+     * @param res
+     */
+    discoAction(req, res) {
+        tradfri.activateDisco();
+
+        res.redirect('/');
+    }
 }
 
 module.exports = new SceneController();

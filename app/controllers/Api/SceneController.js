@@ -31,6 +31,18 @@ class SceneController extends baseController {
 
         this.jsonResponse(res, 200, { 'message': 'Started scene!' });
     }
+
+    /**
+     * Action for the disco api route
+     *
+     * @param req
+     * @param res
+     */
+    discoAction(req, res) {
+        tradfri.activateDisco();
+
+        this.jsonResponse(res, 200, { 'message': 'Started the disco!' });
+    }
 }
 
 module.exports = new SceneController();

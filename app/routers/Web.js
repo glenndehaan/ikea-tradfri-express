@@ -20,6 +20,12 @@ const routes = [
         method: 'get',
         controller: 'Scene',
         action: 'index'
+    },
+    {
+        route: '/disco',
+        method: 'get',
+        controller: 'Scene',
+        action: 'disco'
     }
 ];
 

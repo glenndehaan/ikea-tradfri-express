@@ -8,3 +8,7 @@
 # Dependency managers
 node_modules/
 npm-debug.log
+
+# Project
+app/config/tradfri.json
+app/config/config.js
