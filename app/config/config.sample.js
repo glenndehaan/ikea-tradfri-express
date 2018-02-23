@@ -20,23 +20,23 @@ const config = {
         secret: "averysecretstring"
     },
     tradfri: {
-        ip: "192.168.11.200",
-        gatewayCode: "abcdef1234567890",
+        ip: "192.168.1.XX",
+        gatewayCode: "abcdef123456",
         scenes: {
             "movie": [
                 {
                     lightId: "65537",
                     on: true,
-                    brightness: 0.7,
-                    color: "4a418a",
-                    transitionTime: 10
+                    brightness: 1,
+                    color: "6c83ba",
+                    transitionTime: 20
                 },
                 {
                     lightId: "65538",
                     on: true,
-                    brightness: 0.7,
-                    color: "4a418a",
-                    transitionTime: 10
+                    brightness: 1,
+                    color: "6c83ba",
+                    transitionTime: 20
                 }
             ],
             "fullOn": [
@@ -44,14 +44,14 @@ const config = {
                     lightId: "65537",
                     on: true,
                     brightness: 1,
-                    color: "e78834",
+                    color: "f2eccf",
                     transitionTime: 5
                 },
                 {
                     lightId: "65538",
                     on: true,
                     brightness: 1,
-                    color: "e78834",
+                    color: "f2eccf",
                     transitionTime: 5
                 }
             ],
@@ -60,14 +60,14 @@ const config = {
                     lightId: "65537",
                     on: true,
                     brightness: 0.7,
-                    color: "e78834",
+                    color: "f2eccf",
                     transitionTime: 5
                 },
                 {
                     lightId: "65538",
                     on: true,
                     brightness: 0.7,
-                    color: "e78834",
+                    color: "f2eccf",
                     transitionTime: 5
                 }
             ],
@@ -83,6 +83,9 @@ const config = {
                     transitionTime: 5
                 }
             ]
+        },
+        disco: {
+            bulbIds: ["65537", "65538"]
         }
     }
 };
