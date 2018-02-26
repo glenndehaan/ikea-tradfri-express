@@ -1,5 +1,4 @@
 const baseController = require('./BaseController');
-const config = require('../../config/config');
 
 class IndexController extends baseController {
     /**
@@ -11,8 +10,7 @@ class IndexController extends baseController {
     indexAction(req, res) {
         res.render('index', this.mergePageConfig(req, {
             template: 'index/index',
-            pageTitle: 'Home',
-            scenes: Object.keys(config.tradfri.scenes)
+            pageTitle: 'Home'
         }));
     }
 

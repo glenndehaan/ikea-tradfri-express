@@ -14,18 +14,6 @@ const routes = [
         method: 'get',
         controller: 'Index',
         action: 'index'
-    },
-    {
-        route: '/scene/:scene',
-        method: 'get',
-        controller: 'Scene',
-        action: 'index'
-    },
-    {
-        route: '/disco',
-        method: 'get',
-        controller: 'Scene',
-        action: 'disco'
     }
 ];
 

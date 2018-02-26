@@ -16,6 +16,12 @@ const routes = [
         action: 'index'
     },
     {
+        route: '/methods',
+        method: 'get',
+        controller: 'Index',
+        action: 'methods'
+    },
+    {
         route: '/scene/:scene',
         method: 'get',
         controller: 'Scene',

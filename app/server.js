@@ -4,6 +4,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const browsersupport = require('express-browsersupport');
 
 /**
  * Import own packages
@@ -35,6 +36,14 @@ app.use(express.static(`${__dirname}/../public`));
  */
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+/**
+ * Configure app to use Browser Support
+ */
+app.use(browsersupport({
+    redirectUrl: "/oldbrowser",
+    supportedBrowsers: config.application.supportedBrowsers
+}));
 
 /**
  * Configure routers
